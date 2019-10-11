@@ -1,5 +1,5 @@
 $(function () {
-
+    if(location.href.indexOf('index') > -1){
     $('.galeria').bxSlider({
         mode: 'fade',
         captions: false,
@@ -52,7 +52,7 @@ $(function () {
             </article>`;
         $('#posts').append(post);
     });
-
+    }
     // Selector de temas
     var theme = $('#theme');
     $('#to-green').click(function(){
@@ -75,4 +75,28 @@ $(function () {
         },500);
         return false;
     });
+
+    // login falso
+
+    $('#login').submit(function(){
+        var name = $('#name').val();
+        localStorage.setItem('name',name);
+    });
+
+    var form_name = localStorage.getItem('name');
+    if(form_name != null && form_name != 'undefined' ){
+        var about_parrafo = $('#about p');
+        about_parrafo.html('<br><strong>Bienvenido, ' + form_name + '</strong>');
+        about_parrafo.append('<a href="" id="logout">Cerrar sesion</a>');
+        $('#login').hide();
+
+        $('#logout').click(function(){
+            localStorage.clear();
+            location.reload();
+        });
+    }
+
+    if(location.href.indexOf('about') > -1){
+        $('#acordeon').accordion();
+    }
 });

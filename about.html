@@ -9,15 +9,13 @@
     <!-- Estilos de CSS -->
     <link rel="stylesheet" href="css/styles.css">
     <link id="theme" rel="stylesheet" href="css/green.css">
-    <!-- Slider CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <!-- Slider -->
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-    <!-- Moment -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es.js"></script>
+    <!-- Jquery UI -->
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui-1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui-1.12.1/jquery-ui.structure.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui-1.12.1/jquery-ui.theme.css">
+    <script src="js/jquery-ui-1.12.1/jquery-ui-1.12.1/jquery-ui.min.js"></script>
     <!-- Mis Scripts -->
     <script src="js/main.js"></script>
 </head>
@@ -45,17 +43,37 @@
                 </ul>
             </nav>
         </header>
-        <!-- Slider -->
-        <div id="slider">
-            <div class="galeria">
-                <div><img src="img/hojas.jpg" title="Hojas"></div>
-                <div><img src="img/rojo.jpg" title="Rojo"></div>
-                <div><img src="img/cielo.jpg" title="Cielo"></div>
-            </div>
-        </div>
         <!-- Contenido -->
         <section id="content">
-            <div id="posts">
+            <h2>Sobre mi</h2>
+            <div id="box">
+                <!-- Cargar Acordeon -->
+                <div id="acordeon">
+                    <h3>¿Quienes somos?</h3>
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae enim explicabo eveniet modi
+                            ipsa repellendus, perspiciatis corrupti recusandae maiores perferendis, earum iusto facere
+                            corporis voluptatem non alias quia, in nesciunt.
+                        </p>
+                    </div>
+                    <h3>Nuestros servicios</h3>
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae enim explicabo eveniet modi
+                            ipsa repellendus, perspiciatis corrupti recusandae maiores perferendis, earum iusto facere
+                            corporis voluptatem non alias quia, in nesciunt.
+                        </p>
+                    </div>
+                    <h3>Nuestros clientes</h3>
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae enim explicabo eveniet modi
+                            ipsa repellendus, perspiciatis corrupti recusandae maiores perferendis, earum iusto facere
+                            corporis voluptatem non alias quia, in nesciunt.
+                        </p>
+                    </div>
+                </div>
             </div>
             <aside id="sidebar">
                 <div id="about">
@@ -88,4 +106,5 @@
         <a href="#" class="subir">Ir arriba</a>
     </footer>
 </body>
+
 </html>
