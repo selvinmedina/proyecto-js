@@ -110,4 +110,18 @@ $(function () {
 
 
     }
+
+    // Validacion
+    if (location.href.indexOf('contact') > -1) {
+
+        $("form input[name='date']").datepicker({
+            dateFormat: 'dd-mm-yy'
+        });
+
+        $.validate({
+            lang: 'es',
+            errorMessagePosition: 'top',
+            scrollTopOnError: true
+        });
+    }
 });

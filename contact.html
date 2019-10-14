@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui-1.12.1/jquery-ui.structure.css">
     <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui-1.12.1/jquery-ui.theme.css">
     <script src="js/jquery-ui-1.12.1/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <!-- Plugin Validacion -->
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js" > </script> 
     <!-- Mis Scripts -->
     <script src="js/main.js"></script>
 </head>
@@ -45,9 +47,27 @@
         </header>
         <!-- Contenido -->
         <section id="content">
-            <h2>Sobre mi</h2>
             <div id="box">
                 <!-- Cargar formulario de contacto -->
+                <h2>Contacto</h2>
+                <form method="POST" id="form_contact" action="">
+                    <label for="name">Nombre</label>
+                    <input data-validation="alphanumeric" type="text" name="name" id="name">
+                    <label for="surname">Apellidos</label>
+                    <input type="text" name="surname" data-validation="alphanumeric" id="surname">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" data-validation="email" id="email">
+                    <label for="sex">Sexo</label>
+                    <select name="sex" id="sex" data-validation="required">
+                        <option value="men">Hombre</option>
+                        <option value="woman">Mujer</option>
+                    </select>
+                    <label for="date">Fecha de nacimiento</label>
+                    <input type="text"  data-validation="date" data-validation-format="dd-mm-yyyy" name="date" id="date">
+                    <label for="years">Edad</label>
+                    <input type="number"  data-validation="number" name="years" id="years">
+                    <input type="submit" value="Enviar">
+                </form>
             </div>
             <aside id="sidebar">
                 <div id="about">
